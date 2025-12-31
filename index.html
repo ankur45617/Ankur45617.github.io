@@ -1,40 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankur Pal | Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Proposal for Shiwangi ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: radial-gradient(circle at top, #ff5f6d, #ffc371);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+        text-align: center;
+        color: white;
+        padding: 20px;
+        z-index: 2;
+        max-width: 90%;
+    }
+
+    h1, h2, p {
+        opacity: 0;
+        animation: showText 2s ease forwards;
+    }
+
+    h1 {
+        animation-delay: 1s;
+        font-size: 2.6em;
+    }
+
+    h2 {
+        animation-delay: 3s;
+        font-size: 1.8em;
+    }
+
+    p {
+        animation-delay: 5s;
+        font-size: 1.3em;
+    }
+
+    @keyframes showText {
+        from { opacity: 0; transform: translateY(20px) scale(0.9); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .heart {
+        position: absolute;
+        font-size: 22px;
+        animation: float 7s linear infinite;
+        opacity: 0.9;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) scale(0.5);
+            opacity: 0;
+        }
+        50% { opacity: 1; }
+        100% {
+            transform: translateY(-10vh) scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .ring {
+        font-size: 4em;
+        margin-top: 20px;
+        animation: ringPop 1.5s infinite alternate;
+    }
+
+    @keyframes ringPop {
+        from { transform: scale(1); }
+        to { transform: scale(1.2); }
+    }
+</style>
 </head>
+
 <body>
-    <header>
-        <img src="assets/profile.jpg" alt="Ankur Pal" class="profile-pic">
-        <h1>Ankur Pal</h1>
-        <p>Full Stack Developer (Python)</p>
-    </header>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate Full Stack Developer specializing in Python technologies. I build dynamic, secure, and scalable web applications.</p>
-    </section>
+<div class="container">
+    <h1>❤️ Happy New Year Shiwangi ❤️</h1>
+    <h2>
+        Tum meri zindagi ki sabse khoobsurat wajah ho ✨
+    </h2>
+    <p>
+        Is naye saal par dil se ek hi sawaal hai…  
+        <br><br>
+        💍 <b>Shiwangi, will you be mine forever?</b> 💍  
+    </p>
+    <div class="ring">💍</div>
+</div>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Portfolio Website</strong> – A personal site built using HTML, CSS, and JS.</li>
-            <li><strong>Blog App</strong> – Built using Django with user authentication and CRUD features.</li>
-            <li><strong>Task Manager API</strong> – Flask-based REST API with JWT authentication.</li>
-        </ul>
-    </section>
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 25 + 15 + "px";
+        document.body.appendChild(heart);
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ankur45617@gmail.com">ankur45617@gmail.com</a></p>
-    </section>
+        setTimeout(() => heart.remove(), 7000);
+    }
 
-    <footer>
-        <p>© 2025 Ankur Pal. All rights reserved.</p>
-    </footer>
+    setInterval(createHeart, 300);
+</script>
+
 </body>
 </html>
